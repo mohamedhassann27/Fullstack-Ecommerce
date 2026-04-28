@@ -15,8 +15,8 @@ import { Link, useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "@/validation";
-import supabase from "../supabase";
 import { toast } from "sonner";
+import supabase from "@/supabase";
 
 export function RegisterPage({
   className,

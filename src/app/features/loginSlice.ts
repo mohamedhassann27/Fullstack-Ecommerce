@@ -1,5 +1,6 @@
+import supabase from "@/supabase";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import supabase from "../../supabase";
+// import supabase from "../../supabase";
 import { toast } from "sonner";
 
 interface IState {

@@ -15,11 +15,11 @@ import { Link, useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "@/validation";
-import supabase from "../supabase";
 // import { toast } from "sonner"
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "@/app/features/loginSlice";
 import { type AppDispatch, type RootState } from "@/app/store";
+import supabase from "@/supabase";
 
 export function LoginPage({
   className,

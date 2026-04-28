@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router";
-import supabase from "../supabase";
 import type { IProduct } from "@/interfaces";
 import { Button } from "@/components/ui/button";
 import { BsCart3 } from "react-icons/bs";
@@ -9,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Star } from "lucide-react";
 import LoadingSpinner from "@/components/shared/LoadingSpinner";
+import supabase from "@/supabase";
 // import '.'
 
 function ProductDetails() {

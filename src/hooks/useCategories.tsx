@@ -1,5 +1,5 @@
+import supabase from "@/supabase";
 import { useQuery } from "@tanstack/react-query";
-import supabase from "../supabase";
 
 function useCategories() {
   return useQuery({

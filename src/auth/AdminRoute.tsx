@@ -1,5 +1,5 @@
+import supabase from "@/supabase";
 import { useEffect, useState } from "react";
-import supabase from "../supabase";
 import { Navigate, Outlet } from "react-router";
 
 function AdminRoute() {

@@ -4,9 +4,11 @@ import { FaSackDollar } from "react-icons/fa6";
 import img1 from '.././assets/new1.webp'
 import img2 from '.././assets/new2.webp'
 
-import CountUpModule from "react-countup";
-const CountUp = CountUpModule.default;
-// import CountUp from "react-countup";
+// import ReactCountUp from 'react-countup';
+// const CountUp = ReactCountUp.default ?? ReactCountUp;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+import CountUpModule from 'react-countup';
+const CountUp = (CountUpModule as any).default;
 
 function About() {
     const services= [

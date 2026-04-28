@@ -21,9 +21,9 @@ import {
 import { Link, useNavigate } from "react-router";
 
 import profileImg from "../../assets/momo.webp";
-import supabase from "../../supabase";
 import { useEffect, useState } from "react";
 import type { IUser } from "@/interfaces";
+import supabase from "@/supabase";
 
 const DropdownProfileMenu = ({ ...props }) => {
   const [userData, setUserData] = useState<IUser | null | any>(null);
