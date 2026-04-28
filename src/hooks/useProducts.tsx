@@ -1,8 +1,9 @@
+// import type { IProduct } from "@/interfaces";
 import supabase from "@/supabase";
 import { useQuery } from "@tanstack/react-query";
 
 function useProducts() {
-  return useQuery({
+  return useQuery<any>({
     queryKey: ["products"],
     queryFn: async () => {
       try {

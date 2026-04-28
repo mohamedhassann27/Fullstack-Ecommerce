@@ -39,7 +39,7 @@ function Sales() {
       >
         <CarouselContent className='my-5'>
           
-          {(data??[]).slice(4, 14).map((product:IProduct, i:number) => (
+          {data?.slice(4, 14).map((product:IProduct, i:number) => (
             <CarouselItem data-aos="fade-up" data-aos-delay={i * 80} key={product.id} className="basis-1/1 md:basis-1/2 lg:basis-1/4 mx-1.5 max-md:px-3">
 
               <ProductCard product={product}/>

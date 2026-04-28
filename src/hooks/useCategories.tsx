@@ -2,7 +2,7 @@ import supabase from "@/supabase";
 import { useQuery } from "@tanstack/react-query";
 
 function useCategories() {
-  return useQuery({
+  return useQuery<any>({
     queryKey: ["categories"],
     queryFn: async () => {
       try {
