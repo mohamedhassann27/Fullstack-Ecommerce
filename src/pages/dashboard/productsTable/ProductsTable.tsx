@@ -24,10 +24,10 @@ const ProductsTable = () => {
   const id = useId();
   const navigate = useNavigate();
   // const {data}= useProducts()
-  const { isLoading, data, isError } = useGetDashboardProductsQuery({});
+  const { isLoading, data} = useGetDashboardProductsQuery({});
   // console.log(data);
 
-  const [deleteProduct, {isLoading: loading, isError:deleteError}] = useDeleteDashboardProductMutation()
+  const [deleteProduct, {isLoading: loading}] = useDeleteDashboardProductMutation()
   
   // console.log({loading, deleteError});
   

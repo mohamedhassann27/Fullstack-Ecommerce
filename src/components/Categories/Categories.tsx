@@ -5,7 +5,7 @@ import CategoriesSkeleton from "./CategoriesSkeleton"
 
 function Categories() {
 
-    const {isLoading, data, error}= useCategories()
+    const {isLoading, data}= useCategories()
 
     if(isLoading) return <CategoriesSkeleton/>
 

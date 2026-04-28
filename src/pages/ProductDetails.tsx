@@ -8,12 +8,13 @@ import { CiHeart } from "react-icons/ci";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Star } from "lucide-react";
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
 // import '.'
 
 function ProductDetails() {
   const { id } = useParams();
   console.log(id);
-  const { isLoading, data, error } = useQuery({
+  const { isLoading, data} = useQuery({
     queryKey: ["product"],
     queryFn: async () => {
       const { data, error } = await supabase
@@ -27,6 +28,8 @@ function ProductDetails() {
   console.log(data);
   const productDetails: IProduct = data && data[0];
   console.log(productDetails);
+
+  if(isLoading) return <LoadingSpinner/>
 
   return (
     <section className="py-15! md:px-12! relative mb-6">

@@ -14,7 +14,7 @@ import type { IProduct } from '@/interfaces'
 import ProductListSkeleton from '../shared/ProductListSkeleton'
 
 function Sales() {
-  const {isLoading, data, error}= useProducts()
+  const {isLoading, data}= useProducts()
   
   if(isLoading) return <ProductListSkeleton/>
 

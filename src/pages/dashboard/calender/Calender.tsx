@@ -14,7 +14,7 @@ import interactionPlugin from '@fullcalendar/interaction'
 
 interface DemoAppState {
   weekendsVisible: boolean
-  currentEvents: []
+  currentEvents: any
 }
 
 export default class DemoApp extends React.Component<{}, DemoAppState> {

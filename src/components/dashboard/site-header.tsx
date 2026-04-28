@@ -2,7 +2,7 @@
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 import { ModeToggle } from "../Navbar/ModeToggle"
-import { CiHeart, CiSearch } from "react-icons/ci"
+import { CiSearch } from "react-icons/ci"
 // import { NavLink, useNavigate } from "react-router"
 // import { BsCart3 } from "react-icons/bs"
 import { Bell, CircleQuestionMark, LayoutDashboard } from "lucide-react"

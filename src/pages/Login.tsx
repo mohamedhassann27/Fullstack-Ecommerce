@@ -19,14 +19,14 @@ import supabase from "../supabase";
 // import { toast } from "sonner"
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "@/app/features/loginSlice";
-import type { RootState } from "@/app/store";
+import { type AppDispatch, type RootState } from "@/app/store";
 
 export function LoginPage({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   if (localStorage.getItem("token")) navigate("/");
 

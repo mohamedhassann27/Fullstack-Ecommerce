@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Separator } from '@/components/ui/separator'
-import { ArrowLeft, CreditCard, Eye, EyeOff, Gift, Lock, Shield, Tag, Truck } from 'lucide-react'
+import { ArrowLeft, CreditCard, Eye, EyeOff, Gift, Lock, Shield, Truck } from 'lucide-react'
 import { useSelector } from 'react-redux'
 import type { IProduct } from '@/interfaces'
 import type { RootState } from '@/app/store'
@@ -299,7 +299,7 @@ const orderProducts= useSelector((state:RootState)=> state.cart)
                               type='button'
                               variant='ghost'
                               size='icon'
-                              className="h-9 w-9 absolute end-0 top-1/2 h-full -translate-y-1/2 cursor-pointer hover:bg-transparent"
+                              className="h-9 w-9 absolute inset-e-0 top-1/2  -translate-y-1/2 cursor-pointer hover:bg-transparent"
                               onClick={() => setShowCvv(!showCvv)}
                             >
                               {showCvv ? (

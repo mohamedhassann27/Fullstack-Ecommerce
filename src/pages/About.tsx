@@ -6,6 +6,7 @@ import img2 from '.././assets/new2.webp'
 
 import CountUpModule from "react-countup";
 const CountUp = CountUpModule.default;
+// import CountUp from "react-countup";
 
 function About() {
     const services= [
@@ -63,7 +64,7 @@ function About() {
                             {service.icon}
                             {/* <h3 className='text-2xl font-bold'>{service.number}K</h3> */}
                             <p className="text-2xl  font-bold">
-                                <CountUp end={service.number} decimals={1}  duration={3.5}/>K
+                                <CountUp end={service.number} decimals={1}  duration={3.5} enableScrollSpy/>K
                             </p>
                             <p className='-mt-2'>{service.text}</p>
                         </div>

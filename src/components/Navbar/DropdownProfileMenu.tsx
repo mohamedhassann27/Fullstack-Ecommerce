@@ -36,7 +36,7 @@ const DropdownProfileMenu = ({ ...props }) => {
 
   useEffect(() => {
     (async () => {
-      const { data, error } = await supabase.auth.getUser();
+      const { data } = await supabase.auth.getUser();
       // console.log({data, error});
       setUserData(data?.user);
     })();

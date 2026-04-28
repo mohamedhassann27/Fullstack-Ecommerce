@@ -10,8 +10,8 @@ interface IState {
 
 const initialState: IState = {
   isLoading: false,
-  data: {},
-  error: "",
+  data: null,
+  error: null,
 };
 
 const loginUser = createAsyncThunk(
