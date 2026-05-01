@@ -5,7 +5,7 @@ import { useNavigate } from "react-router"
 import { useDispatch } from "react-redux"
 import { addProductToWishlist } from "@/app/features/wishlistSlice"
 import { addProductToCart } from "@/app/features/cartSlice"
-import { toast } from "sonner"
+// import { toast } from "sonner"
 
 function ProductCard({product}:{product:IProduct}) {
     const navigate= useNavigate()
@@ -13,11 +13,11 @@ function ProductCard({product}:{product:IProduct}) {
 
     const HandleAddToCart= ()=>{
         dispatch(addProductToCart(product))
-        toast.success("Product is added to cart",  { position: "top-center" })
+        // toast.success("Product is added to cart",  { position: "top-center" })
     }
     const handleAddToWishlist= ()=>{
         dispatch(addProductToWishlist(product))
-        toast.success("Product is added to wishlist",  { position: "top-center" })
+        // toast.success("Product is added to wishlist",  { position: "top-center" })
     }
     
     return (

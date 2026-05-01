@@ -30,7 +30,7 @@ const DropdownProfileMenu = ({ ...props }) => {
   const navigate = useNavigate();
 
   const logoutHandler = () => {
-    localStorage.clear();
+    localStorage.removeItem('token');
     navigate("/login");
   };
 

@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, useState } from "react";
 
 import { Eye, PencilIcon, Trash2Icon } from "lucide-react";
 
@@ -17,8 +17,9 @@ import {
 import type { IProduct } from "@/interfaces";
 
 import { useNavigate } from "react-router";
-import { useDeleteDashboardProductMutation, useGetDashboardProductsQuery } from "@/app/services/productsApiSlice";
+import { useGetDashboardProductsQuery } from "@/app/services/productsApiSlice";
 import ProductsTableSkeleton from "./ProductsTableSkeleton";
+import RemoveDialog from "@/components/dashboard/removeDialog";
 
 const ProductsTable = () => {
   const id = useId();
@@ -26,12 +27,12 @@ const ProductsTable = () => {
   // const {data}= useProducts()
   const { isLoading, data} = useGetDashboardProductsQuery({});
   // console.log(data);
-
-  const [deleteProduct, {isLoading: loading}] = useDeleteDashboardProductMutation()
+  // const [deleteProduct, {isLoading: loading}] = useDeleteDashboardProductMutation()
   
+  const [openDialog, setOpenDialog] = useState(false);
+  const [itemtoDelete, setItemToDelete] = useState<number|string|null>(null);
   // console.log({loading, deleteError});
   
-  if (loading) return <ProductsTableSkeleton/>;
   if (isLoading) return <ProductsTableSkeleton/>
 
   return (
@@ -100,27 +101,25 @@ const ProductsTable = () => {
                     <PencilIcon />
                   </Button>
                   <Button
-                  onClick={()=>deleteProduct(item.id)}
+                  onClick={()=>{
+                    // deleteProduct(item.id)
+                    setOpenDialog(true)
+                    setItemToDelete(item.id)
+                  }}
                     variant="ghost"
                     size="icon"
                     className="rounded-full  cursor-pointer"
                     aria-label={`product-${item.id}-remove`}
                   >
-                    <Trash2Icon />
+                    <Trash2Icon/>
                   </Button>
-                  {/* <Button
-                    variant='ghost'
-                    size='icon'
-                    className='rounded-full'
-                    aria-label={`product-${item.id}-archive`}
-                  >
-                    <ArchiveIcon />
-                  </Button> */}
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
+        {/* remove dialog */}
+        <RemoveDialog open={openDialog} setOpen={setOpenDialog} productId={itemtoDelete}/>
       </div>
     </div>
   );

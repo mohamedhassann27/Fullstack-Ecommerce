@@ -1,5 +1,6 @@
 import type { IProduct } from "@/interfaces";
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "sonner";
 
 const initialState: IProduct[]= JSON.parse(localStorage.getItem('cartProducts')|| '[]')
 
@@ -14,8 +15,10 @@ const cartSlice= createSlice({
             const existingProduct= state.find(item=>item.id==addedProduct.id)
             if(existingProduct){
                 existingProduct.quantity+=1
+                toast.success("Product quantity updated",  { position: "top-center" })
             }else{
                 state.push({...addedProduct, quantity:1})
+                toast.success("Product is added to cart",  { position: "top-center" })
             }
             localStorage.setItem('cartProducts', JSON.stringify(state))
         },
