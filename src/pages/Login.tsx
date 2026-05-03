@@ -140,6 +140,21 @@ export function LoginPage({
                   Login
                 </Button>
               </Field>
+              <Button
+                type="button"
+                variant="outline"
+                className="py-5 cursor-pointer w-full"
+                onClick={() => {
+                  dispatch(
+                    loginUser({
+                      email: "admin@gmail.com",
+                      password: "admin1",
+                    })
+                  );
+                }}
+              >
+                Login as Admin (Demo)
+            </Button>
 
               <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
                 Or continue with

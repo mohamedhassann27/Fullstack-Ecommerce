@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Link } from 'react-router'
 
 export default function Hero() {
   // const [isLoading, setIsLoading] = useState(true)
@@ -33,8 +34,8 @@ export default function Hero() {
       {/* Sidebar */}
       <div data-aos="fade-right" data-aos-duration="600" className="md:py-12 py-6 border-r max-md:border-b max-md:hidden md:w-[22%]">
         <ul  className='flex-col  space-y-5'>
-          {categories.map((link,i)=> (
-            <li data-aos="fade-right" data-aos-delay={i * 60} key={link}><a href="#">{link}</a></li>
+          {categories.map((link)=> (
+            <li data-aos="fade-right" data-aos-delay={400} key={link}><Link to={'/collection'}>{link}</Link></li>
           ))}
         </ul>
       </div>

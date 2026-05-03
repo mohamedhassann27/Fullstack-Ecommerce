@@ -4,6 +4,7 @@ import ProtectedRoute from '@/auth/ProtectedRoute'
 import LoadingSpinner from '@/components/shared/LoadingSpinner'
 import DashboardLayout from '@/layout/DashboardLayout'
 import RootLayout from '@/layout/RootLayout'
+import Collection from '@/pages/Collection'
 import HomePage from '@/pages/Home'
 import LoginPage from '@/pages/Login'
 import { NotFoundPage } from '@/pages/NotFoundPage'
@@ -49,6 +50,7 @@ function Router() {
                         <Route path='/about' element={<About/>}/>
                         <Route path='/contact' element={<Contact/>}/>
                         <Route path={`products/:id`} element={<ProductDetails/>}/>
+                        <Route path={`/collection`} element={<Collection/>}/>
                     </Route>
                 </Route>
 

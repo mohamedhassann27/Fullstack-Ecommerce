@@ -29,7 +29,7 @@ function Navbar () {
             {/* Desktop Menu */}
             <div className="hidden sm:flex sm:gap-10 items-center">
                 <NavLink to='/' >Home</NavLink>
-                <NavLink to='/products'>Collection</NavLink>
+                <NavLink to='/collection'>Collection</NavLink>
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/contact'>Contact</NavLink>
             </div>
@@ -69,7 +69,7 @@ function Navbar () {
             {/* Mobile Menu */}
             <div className={`${open ? 'flex' : 'hidden'} absolute top-15 left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden cursor-pointer`}>
                 <NavLink to={'/'} className="block">Home</NavLink>
-                <NavLink to={"/products"} className="block">Collection</NavLink>
+                <NavLink to={"/collection"} className="block">Collection</NavLink>
                 <NavLink to={"/about"} className="block">About</NavLink>
                 <NavLink to={"/contact"} className="block">Contact</NavLink>
                 <Button onClick={logoutHandler} variant="destructive" className="cursor-pointer">
