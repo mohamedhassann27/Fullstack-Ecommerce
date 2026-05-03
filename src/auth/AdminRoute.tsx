@@ -15,7 +15,7 @@ function AdminRoute() {
     })();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p></p>;
   return userData?.user?.user_metadata.role == "admin" ? (
     <Outlet />
   ) : (

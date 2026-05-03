@@ -1,10 +1,10 @@
 // import AdminRoute from '@/auth/AdminRoute'
+import AdminRoute from '@/auth/AdminRoute'
 import AuthRedirectRoute from '@/auth/AuthRedirectRoute'
 import ProtectedRoute from '@/auth/ProtectedRoute'
 import LoadingSpinner from '@/components/shared/LoadingSpinner'
 import DashboardLayout from '@/layout/DashboardLayout'
 import RootLayout from '@/layout/RootLayout'
-import Collection from '@/pages/Collection'
 import HomePage from '@/pages/Home'
 import LoginPage from '@/pages/Login'
 import { NotFoundPage } from '@/pages/NotFoundPage'
@@ -26,14 +26,18 @@ import { Route, Routes } from 'react-router'
 const Dashboard= lazy(()=> import('@/pages/dashboard/Dashboard'))
 const Calendar= lazy(()=> import('@/pages/dashboard/calender/Calender'))
 const ProductsTable= lazy(()=> import('@/pages/dashboard/productsTable/ProductsTable'))
-const TeamTable= lazy(()=>import('@/pages/dashboard/TeamTable'))
+const TeamTable= lazy(()=>import('@/pages/dashboard/team table/TeamTable'))
 const About =lazy(()=>import('@/pages/About'))
 const CartPage =lazy(()=>import('@/pages/Cart'))
 const Checkout =lazy(()=>import('@/pages/CheckOut'))
 const Contact =lazy(()=>import('@/pages/Contact'))
 const ProductDetails =lazy(()=>import('@/pages/ProductDetails'))
 const Wishlist =lazy(()=>import('@/pages/Wishlist'))
-
+const Collection= lazy(()=> import('@/pages/Collection'))
+const AreaChart= lazy(()=> import('@/pages/dashboard/areachart/AreaChrt'))
+const BarChart= lazy(()=> import('@/pages/dashboard/areachart/BarChart'))
+const PieChart= lazy(()=> import('@/pages/dashboard/piechart/PieChart'))
+const LineChart= lazy(()=> import('@/pages/dashboard/linechart/LineChart'))
 
 function Router() {
     return (
@@ -59,7 +63,7 @@ function Router() {
                     <Route path='/register' element={<RegisterPage/>}/>
                 </Route>
 
-                {/* <Route element={<AdminRoute/>}> */}
+                <Route element={<AdminRoute/>}>
                     <Route path='/dashboard' element={<DashboardLayout/>}>
                         <Route index element={<Dashboard/>}/>
                         <Route path='/dashboard/products' element={<ProductsTable/>}/>
@@ -67,9 +71,12 @@ function Router() {
                         <Route path='/dashboard/products/:id' element={<ProductDetails/>}/>
                         <Route path='/dashboard/calender' element={<Calendar/>}/>
                         <Route path='/dashboard/team' element={<TeamTable/>}/>
+                        <Route path='/dashboard/areachart' element={<AreaChart/>}/>
+                        <Route path='/dashboard/barchart' element={<BarChart/>}/>
+                        <Route path='/dashboard/piechart' element={<PieChart/>}/>
+                        <Route path='/dashboard/linechart' element={<LineChart/>}/>
                     </Route>
-                {/* </Route> */}
-                        {/* <Route path={`/dashboard`} element={<Dashboard/>}/> */}
+                </Route>
 
                 <Route path='*' element={<NotFoundPage/>}/>
             </Routes>

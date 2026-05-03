@@ -11,9 +11,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { LayoutDashboardIcon, ListIcon, CameraIcon, FileTextIcon, Settings2Icon, CircleHelpIcon, SearchIcon, CommandIcon, Heart, Bell,} from "lucide-react"
-import { PiListChecks } from "react-icons/pi";
-import { IoIosPricetags, IoMdContacts } from "react-icons/io";
+import { LayoutDashboardIcon, ListIcon, CameraIcon, FileTextIcon, Settings2Icon, CircleHelpIcon, SearchIcon, CommandIcon, Heart, } from "lucide-react"
+import { AiOutlinePieChart } from "react-icons/ai";
+import { TbChartArea } from "react-icons/tb";
+import { PiChartBar, PiChartLineBold } from "react-icons/pi";
+
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { RiTeamLine } from "react-icons/ri";
 import { Link } from "react-router"
@@ -152,32 +154,32 @@ const data = {
   ],
   documents: [
     {
-      name: "Pricing",
-      url: "/dashboard/pricing",
+      name: "Area Chart",
+      url: "/dashboard/areachart",
       icon: (
-        <IoIosPricetags />
+        <TbChartArea />
+      ),
+    },
+    {
+      name: "Bar Chart",
+      url: "/dashboard/barchart",
+      icon: (
+        <PiChartBar />
       ),
     },
     
     {
-      name: "Contact",
-      url: "/dashboard/concat",
+      name: "Pie Chart",
+      url: "/dashboard/piechart",
       icon: (
-        <IoMdContacts />
+        <AiOutlinePieChart />
       ),
     },
     {
-      name: "Inbox",
-      url: "/dashboard/inbox",
+      name: "Line Chart",
+      url: "/dashboard/linechart",
       icon: (
-        <Bell/>
-      ),
-    },
-    {
-      name: "Order Lists",
-      url: "/dashboard/orders",
-      icon: (
-        <PiListChecks />
+        <PiChartLineBold/>
       ),
     },
   ],

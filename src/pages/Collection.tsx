@@ -42,7 +42,7 @@ return (
         {/* 🔹 Sidebar */}
         <aside
             data-aos="fade-right"
-            className="border rounded-2xl p-4 space-y-6 h-fit"
+            className="border rounded-2xl p-4 my-3 space-y-6 h-fit max-md:mx-4"
         >
             {/* Search */}
             <div>
@@ -85,7 +85,7 @@ return (
         </aside>
 
         {/* 🔹 Content */}
-        <div className="space-y-6">
+        <div className="space-y-6 max-md:mx-4">
             {/* Top Bar */}
             <div data-aos="fade-down" className="flex justify-end">
             <Select

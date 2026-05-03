@@ -9,6 +9,7 @@ export interface IProduct{
     category: string,
     rating: number,
     reviews: number
+    created_at: string
 }
 
 export interface IUser{
