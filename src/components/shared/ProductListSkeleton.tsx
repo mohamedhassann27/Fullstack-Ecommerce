@@ -2,17 +2,19 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export const title = "Horizontal Card Layout";
 
-const ProductListSkeleton = () => (
+const ProductListSkeleton = ({length = 4, header = true}) => (
 <div className="flex flex-col gap-5 py-10">
-    <div className="flex items-center justify-center gap-3 w-fit">
-        <Skeleton className="h-10 w-5 rounded-sm"></Skeleton>
-        <Skeleton className='font-semibold w-16 h-4'></Skeleton>
-    </div>
+    {header && (
+        <div className="flex items-center justify-center gap-3 w-fit">
+            <Skeleton className="h-10 w-5 rounded-sm"></Skeleton>
+            <Skeleton className='font-semibold w-16 h-4'></Skeleton>
+        </div>
+    )}
 
-    <Skeleton className='w-2/4 h-10 mt-5'></Skeleton>
+    {header&& <Skeleton className='w-2/4 h-10 mt-5'></Skeleton>}
 
     <div className="flex gap-5 mt-10 justify-between w-full">
-        {Array.from({length:4}, (_,i)=>(
+        {Array.from({length:length}, (_,i)=>(
             <div key={i} className="flex-col items-center max-md:flex-row max-md:items-center gap-5 justify-center border rounded-md p-3">
                 <Skeleton className=" w-68 h-50 rounded-lg" />
                 <div className="flex flex-1 flex-col gap-2 mx-2 max-md:px-3">

@@ -77,9 +77,11 @@ const DropdownProfileMenu = ({ ...props }) => {
             <div className="flex flex-col space-y-1">
               <p className="text-sm leading-none font-medium">
                 {userData?.user_metadata?.userName}
+                {/* Mohamed Hassan */}
               </p>
               <p className="text-xs leading-none text-muted-foreground">
                 {userData?.user_metadata?.email}
+                {/* sdfdssdf489@gmail.com */}
               </p>
               {/* <Badge className="w-fit text-xs" variant="secondary">
                     Pro

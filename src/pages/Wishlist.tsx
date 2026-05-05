@@ -9,6 +9,7 @@ import type { RootState } from "@/app/store";
 // import { useNavigate } from "react-router";
 // import { removeProductFromWishlist } from "@/app/features/wishlistSlice";
 import ProductCard from "@/components/shared/ProductCard";
+import { Link } from "react-router";
 // import { addProductToCart } from "@/app/features/cartSlice";
 
 
@@ -84,7 +85,9 @@ const Wishlist = ({ className }: Wishlist1Props) => {
               <p className="mt-2 max-w-sm text-muted-foreground">
                 Save items you love by clicking the heart icon on any product
               </p>
-              <Button className="mt-6">Continue Shopping</Button>
+              <Button className="mt-6" asChild>
+                <Link to="/collection">Continue Shopping</Link>
+              </Button>
             </CardContent>
           </Card>
         )}

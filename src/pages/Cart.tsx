@@ -36,8 +36,8 @@ export default function ShoppingCart1() {
                     <ShoppingBag className='text-muted-foreground/50 mb-4 size-12' />
                     <h3 className='text-lg font-medium'>Your cart is empty</h3>
                     <p className='text-muted-foreground mt-1 text-sm'>Add some items to get started</p>
-                    <Button disabled={true} className="h-9 px-4 py-2 mt-4 cursor-pointer" variant='outline'>
-                    Continue Shopping
+                    <Button className="h-9 px-4 py-2 mt-4 cursor-pointer" variant='outline'>
+                        <Link to='/collection'>Continue Shopping</Link>
                     </Button>
                 </CardContent>
                 </Card>
@@ -183,7 +183,7 @@ export default function ShoppingCart1() {
 
             <Button variant='outline' className="h-9 px-4 py-2 w-full cursor-pointer">
                 <Store />
-                <Link to='/'>Continue Shopping</Link>
+                <Link to='/collection'>Continue Shopping</Link>
                 <MoveRight />
             </Button>
             </div>
