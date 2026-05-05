@@ -78,9 +78,14 @@ export function LoginPage({
     // }
   };
 
+  const redirectUrl = window.location.origin;
+
   const googleRegister = async () => {
     await supabase.auth.signInWithOAuth({
       provider: "google",
+      options: {
+      redirectTo: redirectUrl,
+  },
     });
   };
 
